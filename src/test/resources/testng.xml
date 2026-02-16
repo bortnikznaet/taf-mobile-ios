@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="iOS Sauce Labs Suite" parallel="false">
+    <test name="Contacts fields test">
+        <classes>
+            <class name="com.taf.ios.tests.ContactsFieldsTest"/>
+        </classes>
+    </test>
+</suite>

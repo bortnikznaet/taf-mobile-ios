@@ -14,7 +14,4 @@ public abstract class BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
-    protected IOSDriver getDriver() {
-        return driver;
-    }
 }

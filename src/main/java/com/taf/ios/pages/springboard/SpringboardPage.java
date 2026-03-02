@@ -31,7 +31,6 @@ public class SpringboardPage extends BasePage {
         try {
             log.info("Going to Home screen via mobile: pressButton (home)");
             driver.executeScript("mobile: pressButton", Map.of("name", "home"));
-            return;
         } catch (Exception ignored) {
             log.debug("mobile: pressButton not available; trying swipe fallback");
         }

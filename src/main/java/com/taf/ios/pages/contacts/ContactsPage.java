@@ -1,17 +1,15 @@
 package com.taf.ios.pages.contacts;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
+
+import com.taf.ios.pages.BasePage;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.ios.IOSDriver;
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.taf.ios.pages.BasePage;
-
-import java.time.Duration;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class ContactsPage extends BasePage {
     private static final Logger log = LoggerFactory.getLogger(ContactsPage.class);

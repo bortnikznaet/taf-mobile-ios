@@ -1,13 +1,13 @@
 package com.taf.ios.tests;
 
+import static org.testng.AssertJUnit.assertTrue;
+
 import com.taf.ios.driver.DriverManager;
 import com.taf.ios.pages.contacts.ContactsPage;
 import com.taf.ios.pages.springboard.SpringboardPage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
-
-import static org.testng.AssertJUnit.assertTrue;
 
 public class ContactsFieldsTest extends BaseTest {
 

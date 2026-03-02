@@ -1,12 +1,11 @@
 package com.taf.ios.config;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Locale;
 import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SauceLabsPropertiesReader {
     private static final String PROPERTIES_FILE = "saucelabs.properties";

@@ -3,14 +3,13 @@ package com.taf.ios.driver;
 import com.taf.ios.config.SauceLabsPropertiesReader;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DriverManager {
     private static final Logger log = LoggerFactory.getLogger(DriverManager.class);

@@ -1,15 +1,13 @@
 package com.taf.ios.pages.springboard;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+
 import com.taf.ios.pages.BasePage;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.ios.IOSDriver;
+import java.util.Map;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Map;
-
-import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class SpringboardPage extends BasePage {
 

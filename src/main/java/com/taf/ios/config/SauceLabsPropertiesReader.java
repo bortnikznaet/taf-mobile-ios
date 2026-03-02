@@ -74,16 +74,12 @@ public class SauceLabsPropertiesReader {
             return generic;
         }
 
-        switch (key) {
-            case "saucelabs.username":
-                return firstNonBlank(System.getenv("SAUCE_USERNAME"), System.getenv("SAUCE_USER"));
-            case "saucelabs.accessKey":
-                return firstNonBlank(System.getenv("SAUCE_ACCESS_KEY"), System.getenv("SAUCE_KEY"));
-            case "saucelabs.url":
-                return firstNonBlank(System.getenv("SAUCE_URL"), System.getenv("SAUCELABS_URL"));
-            default:
-                return null;
-        }
+        return switch (key) {
+            case "saucelabs.username" -> firstNonBlank(System.getenv("SAUCE_USERNAME"), System.getenv("SAUCE_USER"));
+            case "saucelabs.accessKey" -> firstNonBlank(System.getenv("SAUCE_ACCESS_KEY"), System.getenv("SAUCE_KEY"));
+            case "saucelabs.url" -> firstNonBlank(System.getenv("SAUCE_URL"), System.getenv("SAUCELABS_URL"));
+            default -> null;
+        };
     }
 
     private String toEnvKey(String key) {

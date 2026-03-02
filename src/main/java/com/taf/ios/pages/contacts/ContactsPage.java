@@ -16,8 +16,8 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 public class ContactsPage extends BasePage {
     private static final Logger log = LoggerFactory.getLogger(ContactsPage.class);
 
-    public ContactsPage(IOSDriver driver) {
-        super(driver);
+    public ContactsPage() {
+        super();
     }
 
     public void waitForContactsHome() {

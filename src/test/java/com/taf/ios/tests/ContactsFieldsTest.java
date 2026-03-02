@@ -1,5 +1,6 @@
 package com.taf.ios.tests;
 
+import com.taf.ios.driver.DriverManager;
 import com.taf.ios.pages.contacts.ContactsPage;
 import com.taf.ios.pages.springboard.SpringboardPage;
 import org.slf4j.Logger;
@@ -14,13 +15,13 @@ public class ContactsFieldsTest extends BaseTest {
 
     @Test
     public void shouldOpenContactsAndVerifyContactIsVisible() {
-        SpringboardPage springboard = new SpringboardPage(driver);
+        SpringboardPage springboard = new SpringboardPage();
         springboard.goHome();
 
-        driver.context("NATIVE_APP");
+        DriverManager.getDriver().context("NATIVE_APP");
         springboard.openAppByName("Contacts");
 
-        ContactsPage contacts = new ContactsPage(driver);
+        ContactsPage contacts = new ContactsPage();
         contacts.waitForContactsHome();
 
         log.info("Asserting contact is visible in Contacts list");

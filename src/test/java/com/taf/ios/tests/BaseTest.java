@@ -11,14 +11,14 @@ import org.testng.annotations.BeforeMethod;
 import java.lang.reflect.Method;
 
 public abstract class BaseTest {
-    protected IOSDriver driver;
+//    protected IOSDriver driver;
     private static final Logger log = LoggerFactory.getLogger(BaseTest.class);
 
     @BeforeMethod(alwaysRun = true)
     public void setUp(Method method) {
         String testName = method.getDeclaringClass().getSimpleName() + "." + method.getName();
         log.info("START TEST: {}", testName);
-        driver = DriverManager.createDriver(testName);
+        DriverManager.createDriver(testName);
     }
 
     @AfterMethod(alwaysRun = true)
@@ -35,7 +35,7 @@ public abstract class BaseTest {
 
             try {
                 String jobStatus = passed ? "passed" : "failed";
-                driver.executeScript("sauce:job-result=" + jobStatus);
+                DriverManager.getDriver().executeScript("sauce:job-result=" + jobStatus);
             } catch (Exception e) {
                 log.debug("Unable to set Sauce job status", e);
             }

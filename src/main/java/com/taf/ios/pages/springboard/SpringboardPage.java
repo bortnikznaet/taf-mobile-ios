@@ -17,8 +17,8 @@ public class SpringboardPage extends BasePage {
 
     private static final String SPRINGBOARD_BUNDLE_ID = "com.apple.springboard";
 
-    public SpringboardPage(IOSDriver driver) {
-        super(driver);
+    public SpringboardPage() {
+        super();
     }
 
     public void goHome() {
